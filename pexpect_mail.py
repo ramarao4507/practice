@@ -1,0 +1,11 @@
+import pexpect
+m_p=pexpect.spawn('python mail.py')
+m_p.expect('gmail')
+m_p.sendline('ramarao4507@gmail.com')
+m_p.expect('password')
+m_p.sendline('Ramarao1@')
+m_p.expect('to')
+m_p.sendline('medida.achyuth@gmail.com')
+m_p.expect('sub')
+m_p.sendline('')
+m_p.close()
